@@ -1,3 +1,13 @@
+created:
+    - app/Http/Controllers/ProductController.php
+    - database/factories/ProductFactory.php
+    - database/migrations/2023_11_27_083309_create_products_table.php
+    - app/Models/Product.php
+    - tests/Feature/Http/Controllers/ProductControllerTest.php
+    - resources/views/products/index.blade.php
+updated:
+    - routes/web.php
 models:
     Project: { title: string, description: text }
     User: { name: string, email: string, email_verified_at: 'datetime nullable', password: string, remember_token: 'string:100 nullable' }
+    Product: { name: string, price: integer }
