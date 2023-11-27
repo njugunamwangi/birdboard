@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,6 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 require __DIR__.'/auth.php';
+
+Route::resource('products', ProductController::class);
+Route::get('products', [ProductController::class, 'index'])->name('products');
