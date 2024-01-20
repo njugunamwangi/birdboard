@@ -8,9 +8,9 @@ use Illuminate\Http\Request;
 class ProjectsController extends Controller
 {
     public function index() {
-        $project = Project::all();
+        $projects = Project::all();
 
-        return view('projects.index', compact('project'));
+        return view('projects.index', compact('projects'));
     }
 
     public function store() {

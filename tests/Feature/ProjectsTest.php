@@ -15,7 +15,7 @@ class ProjectsTest extends TestCase
      * A basic feature test example.
      */
     public function test_a_user_can_create_a_project() {
-        $this->withExceptionHandling();
+        $this->withoutExceptionHandling();
 
         $attributes = [
             'title' => $this->faker->sentence,
@@ -26,6 +26,6 @@ class ProjectsTest extends TestCase
 
         $this->assertDatabaseHas('projects', $attributes);
 
-        // $this->get('/projects')->assertSee($attributes['title']);
+        $this->get('/projects')->assertSee($attributes['title']);
     }
 }
