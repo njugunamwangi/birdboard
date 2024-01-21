@@ -13,8 +13,7 @@ class ProjectsController extends Controller
         return view('projects.index', compact('projects'));
     }
 
-    public function show() {
-        $project = Project::findOrFail(request('project'));
+    public function show(Project $project) {
 
         return view('projects.show', compact('project'));
     }
