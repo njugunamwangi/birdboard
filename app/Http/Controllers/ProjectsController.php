@@ -16,7 +16,8 @@ class ProjectsController extends Controller
     public function store() {
         //validate
         request()->validate([
-            'title' => 'required'
+            'title' => 'required',
+            'description' => 'required',
         ]);
 
         // persist
