@@ -30,6 +30,7 @@ require __DIR__.'/auth.php';
 
 Route::post('/projects', [ProjectsController::class, 'store']);
 Route::get('/projects', [ProjectsController::class, 'index']);
+Route::get('/projects/{project}', [ProjectsController::class, 'show']);
 
 Route::resource('products', ProductController::class);
 Route::get('products', [ProductController::class, 'index'])->name('products');
